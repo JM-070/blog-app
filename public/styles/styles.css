@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    color: #2F2B33;
+    margin: 20px;
+    padding: 10px;
+}
+
+h2{
+    margin: 20px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: #3C2F46;
+    padding: 20px;
+    margin-top: 10px;
+    bottom: 0;
+    /* position: sticky; */
+    width: 100%;
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3C2F46;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #573970;
+  }
+  
+  .active {
+    background-color: #573970;
+  }
+
+
+
+  html body .containers {
+    width: 100%;    
+    max-width: 868px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 1.5rem;
+    background-color: #37323B;
+    color: white;
+    margin: 25px auto;
+  }
+  @media (min-width: 768px) {
+    html body .containers {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  html body .containers .cta-form {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    html body .containers .cta-form {
+      margin-right: 2rem;
+      text-align: left;
+    }
+  }
+  html body .containers .cta-form h2 {
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 25ch;
+    margin: 0 auto;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    html body .containers .cta-form h2 {
+      text-align: left;
+      margin: 0;
+    }
+  }
+  html body .containers .cta-form p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 24ch;
+  }
+  html .form {
+    align-self: center;
+  }
+  html .form__input {
+    width: clamp(120px, 50vw, 420px);
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    border: 1px solid #303030;
+    border-radius: 2px;
+    margin: 0.625rem auto;
+    transition: all 250ms;
+  }
+  html .form__textarea {
+    width: clamp(120px, 50vw, 420px);
+    height: 170px;
+    padding: 0 1.25rem;
+    border: 1px solid #303030;
+    border-radius: 2px;
+    margin: 0.625rem auto;
+    transition: all 250ms;
+  }
+  @media (min-width: 768px) {
+    html .form__input {
+      width: clamp(120px, 35vw, 420px);
+    }
+    html .form__textarea{
+        width: clamp(120px, 35vw, 420px);
+    }
+  }
+  html .form__input:focus {
+    outline: none;
+    border-top-color: rgba(0, 0, 0, 0.1);
+  } 
+
+  html .form__input:not(:placeholder-shown) {
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+  html .form__label {
+    font-size: 1rem;
+    color: white;
+    display: block;
+  }
+
+  .form__submit {
+    background-color: #573970;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .blog{
+    background-color: #37323B;
+    width: 80%;
+    color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+  }
+
+  p{
+    padding: 5px;
+  }
+
+  .blog:hover{
+    background-color: #3C2F46;
+  }
+  
+  .edit-button{
+    background-color: #573970 !important;
+    color: white !important;
+    margin: 10px;
+  }
+
+  .delete-button{
+    background-color: #573970 !important;
+    color: white !important;
+    margin: 10px;
+  }
+
+  .features-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+

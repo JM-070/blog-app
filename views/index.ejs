@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1><%= locals.editMode ? 'Edit Your Blog ✒️' : 'Write Your Own Blog 🤘' %></h1>
+
+<div class="containers">
+    <div class = "cta-form">
+        <h2>Fill out the form!</h2> 
+        <p>Welcome to my blog space! Whether you're here to share your thoughts, tell your story, or dive into something new, 
+            Feel free to express your ideas and inspire others. 
+            Happy blogging!</p>
+    </div>
+    <form action="<%= locals.editMode ? '/edit/' + locals.editBlog.id : '/data' %>" class="form" method="POST">
+        
+        <label for="name" class="form__label">Name</label> 
+        <input type="text" placeholder="Jervin" class="form__input" id="name" name="name" value="<%= locals.editMode ? locals.editBlog.name : '' %>" required/>
+        
+        <label for="title" class="form__label">Title</label>
+        <input type="text" placeholder="A Good Bad Day" class="form__input" id="title" name="title" value="<%= locals.editMode ? locals.editBlog.title : '' %>" required/>
+
+        <label for="subject" class="form__label">Content</label>
+        <!-- <input type="text" placeholder="Subject" class="form__input" id="subject" /> -->
+        <textarea id="content" name="content" class="form__textarea" rows="5" cols="50" required><%= locals.editMode ? locals.editBlog.content : '' %></textarea><br>     
+
+        <input type="submit" id="submitButton" class="form__submit" value="<%= locals.editMode ? 'Update' : 'Submit'  %>"/>
+    </form> 
+</div>
+
+
+<%- include("partials/footer.ejs") %>

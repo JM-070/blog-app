@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1>Read Out Blogs 📜</h1>
+
+
+<div class="container text-center">
+    <% if(locals.blogs && locals.blogs.length) { %>
+            <% locals.blogs.forEach(function(blog, index) { %>
+                <div class="blog col">
+                    <h2><%= blog.title %></h2>
+                    <p><%= blog.content %></p>
+                    <p style="text-align: end; margin-right: 15px; font-style: italic;"> -<%= blog.name %></p>
+                    <div class="features-btn">
+                        <a type="button" class="btn btn-md edit-button" href="/edit/<%= index %>">EDIT</a>
+                    <form action="/delete/<%= index %>" method="post" onsubmit="return confirm('Are you sure you want to delete this blog?');">
+                        <input type="submit" name="upvote" value="DELETE" class="btn btn-md delete-button" />
+                    </form>
+                    </div>
+                </div>  
+            <% }) %>      
+    <% } %>
+</div>
+
+
+<%- include("partials/footer.ejs") %>
